@@ -1,4 +1,4 @@
-const API_KEY = 'NNAzRjOPUiIPvlM3m7pJ91CfqxpVGm2o'; // 🔑 Replace this with my API key!
+const API_KEY = 'NNAzRjOPUiIPvlM3m7pJ91CfqxpVGm2o'; // 🔑 Replacing this with my API key!
 const form = document.getElementById('searchForm');
 const input = document.getElementById('searchInput');
 const gifContainer = document.getElementById('gifContainer');
