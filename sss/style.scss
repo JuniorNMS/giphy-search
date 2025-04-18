@@ -1,0 +1,76 @@
+// Variables
+$font-title: 'Bungee Shade', cursive; // Uncommon Google Font
+$breakpoint-mobile: 320px;
+
+// Base Styles
+body {
+    margin: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+// Header (Flex for Desktop)
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.site-title {
+    font-family: $font-title;
+}
+
+// Navigation (Flex Row → Column on Mobile)
+nav {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+}
+
+// Search Form (Flex for Input + Button)
+#searchForm {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    input {
+        flex: 1;
+        padding: 0.5rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+// Custom Grid (Flex-Based)
+.gif-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .gif-item {
+        flex: 1 0 calc(33.333% - 1rem); // 3 columns
+
+        @media (max-width: $breakpoint-mobile) {
+            flex: 1 0 100%; // 1 column
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

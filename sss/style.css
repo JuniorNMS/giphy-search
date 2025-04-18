@@ -1,0 +1,66 @@
+body {
+  margin: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media (max-width: 320px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.site-title {
+  font-family: "Bungee Shade", cursive;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 320px) {
+  nav {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+}
+
+#searchForm {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+#searchForm input {
+  flex: 1;
+  padding: 0.5rem;
+}
+#searchForm button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.gif-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.gif-grid .gif-item {
+  flex: 1 0 calc(33.333% - 1rem);
+}
+@media (max-width: 320px) {
+  .gif-grid .gif-item {
+    flex: 1 0 100%;
+  }
+}
+.gif-grid .gif-item img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */
