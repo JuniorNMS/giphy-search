@@ -2,6 +2,23 @@ const API_KEY = 'NNAzRjOPUiIPvlM3m7pJ91CfqxpVGm2o'; // 🔑 Replace this with my
 const form = document.getElementById('searchForm');
 const input = document.getElementById('searchInput');
 const gifContainer = document.getElementById('gifContainer');
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// Load saved theme
+const savedTheme = localStorage.getItem('theme') || 'light';
+body.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const currentTheme = body.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  body.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+});
+
+// Existing GIPHY API code remains the same...
+// (Keep search functionality from previous implementation)
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();

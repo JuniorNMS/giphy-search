@@ -1,4 +1,56 @@
 body {
+  margin: 0;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+[data-theme=light] body {
+  background-color: #ffffff;
+}
+[data-theme=dark] body {
+  background-color: #1a1a1a;
+}
+[data-theme=light] body {
+  color: #333333;
+}
+[data-theme=dark] body {
+  color: #ffffff;
+}
+
+header {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+[data-theme=light] header {
+  background-color: #f8f9fa;
+}
+[data-theme=dark] header {
+  background-color: #2d2d2d;
+}
+
+button, input {
+  border: 1px solid;
+}
+[data-theme=light] button, [data-theme=light] input {
+  background-color: #f8f9fa;
+}
+[data-theme=dark] button, [data-theme=dark] input {
+  background-color: #2d2d2d;
+}
+[data-theme=light] button, [data-theme=light] input {
+  color: #333333;
+}
+[data-theme=dark] button, [data-theme=dark] input {
+  color: #ffffff;
+}
+[data-theme=light] button, [data-theme=light] input {
+  border-color: #333333;
+}
+[data-theme=dark] button, [data-theme=dark] input {
+  border-color: #ffffff;
+}
+
+body {
   margin: 1rem;
   font-family: Arial, sans-serif;
 }

@@ -1,3 +1,53 @@
+// Theme Variables
+$themes: (
+  light: (
+    bg: #ffffff,
+    text: #333333,
+    primary: #007bff,
+    header-bg: #f8f9fa,
+  ),
+  dark: (
+    bg: #1a1a1a,
+    text: #ffffff,
+    primary: #4da3ff,
+    header-bg: #2d2d2d,
+  )
+);
+
+// Mixin for theme-aware properties
+@mixin theme($property, $key, $theme-map: $themes) {
+  @each $theme-name, $theme in $theme-map {
+    [data-theme="#{$theme-name}"] & {
+      #{$property}: map-get($theme, $key);
+    }
+  }
+}
+
+// Base styles
+body {
+  margin: 0;
+  padding: 1rem;
+  @include theme(background-color, bg);
+  @include theme(color, text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  @include theme(background-color, header-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+button, input {
+  @include theme(background-color, header-bg);
+  @include theme(color, text);
+  border: 1px solid;
+  @include theme(border-color, text);
+}
+
+// Rest of your existing styles remain the same...
+// (Keep the existing grid, form, and responsive styles)
 // Variables
 $font-title: 'Bungee Shade', cursive; // Uncommon Google Font
 $breakpoint-mobile: 320px;
