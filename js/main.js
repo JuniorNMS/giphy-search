@@ -31,7 +31,7 @@ form.addEventListener('submit', async (e) => {
         );
         const { data } = await response.json();
         
-        gifContainer.innerHTML = ''; // Clear old results
+        gifContainer.innerHTML = ''; // to clear old results
         
         data.forEach(gif => {
             const div = document.createElement('div');
