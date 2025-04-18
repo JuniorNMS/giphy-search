@@ -17,8 +17,8 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', newTheme);
 });
 
-// Existing GIPHY API code remains the same...
-// (Keep search functionality from previous implementation)
+// existing GIPHY API code remains the same
+// (Keeping search functionality from previous implementation)
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
